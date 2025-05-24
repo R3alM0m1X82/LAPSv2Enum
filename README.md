@@ -27,17 +27,17 @@ This script helps security professionals and system administrators identify comp
 
 ### Basic Usage
 ```powershell
-.\Get-LAPSv2Computers.ps1
+Import-module Get-LAPSv2Computers.ps1
 ```
 
 ### Specify Different Domain
 ```powershell
-.\Get-LAPSv2Computers.ps1 -Domain "DC=contoso,DC=com"
+Get-LAPSv2Computers.ps1 -Domain "DC=contoso,DC=com"
 ```
 
-### Show Passwords
+### Decrypt Password
 ```powershell
-.\Get-LAPSv2Computers.ps1 -ShowPassword
+Get-LAPSv2Computers.ps1 -DecryptPassword
 ```
 
 ### Export to CSV
@@ -52,7 +52,7 @@ This script helps security professionals and system administrators identify comp
 
 ### Combined Example
 ```powershell
-.\Get-LAPSv2Computers.ps1 -Domain "DC=lab,DC=local" -ShowPassword -ExportCSV -Method Method2
+.\Get-LAPSv2Computers.ps1 -Domain "DC=lab,DC=local" -DecryptPassword -ExportCSV -Method Method2
 ```
 
 ## 📝 Parameters
@@ -61,18 +61,10 @@ This script helps security professionals and system administrators identify comp
 |-----------|------|---------|-------------|
 | `-Domain` | String | `DC=prod,DC=cybercorp,DC=lab` | Target domain in LDAP format |
 | `-Method` | String | `Method1` | Enumeration method (`Method1` or `Method2`) |
-| `-ShowPassword` | Switch | False | Display LAPS passwords if accessible |
+| `-DecryptPassword` | Switch | False | Display LAPS passwords if accessible |
 | `-ExportCSV` | Switch | False | Export results to CSV file |
 | `-ExportPath` | String | `C:\LAPS_Computers.csv` | Path for CSV export |
 
-## 📊 Output Format
-
-The script provides a formatted table with the following information:
-- **DNSHostName**: Computer's DNS name
-- **DistinguishedName**: Full AD path of the computer object
-- **LAPSPasswordExpiration**: When the LAPS password expires
-- **PasswordType**: Whether password is "Plain" or "Encrypted"
-- **LAPSPassword**: The actual password (only with `-ShowPassword` parameter)
 
 ## 🔒 Security Considerations
 
