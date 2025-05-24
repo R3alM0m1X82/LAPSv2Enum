@@ -32,27 +32,27 @@ Import-module Get-LAPSv2Computers.ps1
 
 ### Specify Different Domain
 ```powershell
-Get-LAPSv2Computers.ps1 -Domain "DC=contoso,DC=com"
+Get-LAPSv2Computers -Domain "DC=contoso,DC=com"
 ```
 
 ### Decrypt Password
 ```powershell
-Get-LAPSv2Computers.ps1 -DecryptPassword
+Get-LAPSv2Computers -DecryptPassword
 ```
 
 ### Export to CSV
 ```powershell
-.\Get-LAPSv2Computers.ps1 -ExportCSV -ExportPath "C:\temp\LAPS_Report.csv"
+Get-LAPSv2Computers -ExportCSV -ExportPath "C:\temp\LAPS_Report.csv"
 ```
 
 ### Use Alternative Method
 ```powershell
-.\Get-LAPSv2Computers.ps1 -Method Method2
+Get-LAPSv2Computers -Method Method2
 ```
 
 ### Combined Example
 ```powershell
-.\Get-LAPSv2Computers.ps1 -Domain "DC=lab,DC=local" -DecryptPassword -ExportCSV -Method Method2
+Get-LAPSv2Computers -Domain "DC=lab,DC=local" -DecryptPassword -ExportCSV -Method Method2
 ```
 
 ## 📝 Parameters
