@@ -1,4 +1,4 @@
-# LAPS v2 Enumerator
+# Get-LAPSv2Computers
 
 A PowerShell script for enumerating computers with Microsoft LAPS v2 (Local Administrator Password Solution) configured in Active Directory environments.
 
