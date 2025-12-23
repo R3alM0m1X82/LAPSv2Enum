@@ -19,7 +19,7 @@ This script helps security professionals and system administrators identify comp
 ## 📋 Requirements
 
 - Windows PowerShell 5.1 or later
-- Network access to domain controller
+- Network connection to domain controller
 - Valid domain credentials
 - Read permissions on LAPS attributes (for password retrieval)
 
